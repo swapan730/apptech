@@ -1,0 +1,600 @@
+/*-----------------------------------------------------------------------------------
+Template Name: AppTech - Apps Landing Page Template
+Description: This is apps landing html5 template
+Version: 1.0
+-----------------------------------------------------------------------------------
+CSS INDEX
+===================
+1. Google font
+2. Theme Default CSS
+3. Helper-Class
+4. Header-Area 
+5. Page-Title 
+6. Contact-Area
+7. Footer-Area 
+-----------------------------------------------------------------------------------*/
+
+
+/*-----------------
+1. Google font
+------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+
+/*-------------------
+2. Theme Default CSS
+--------------------*/
+
+a {
+	text-decoration: none;
+	outline: none;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+	color: #334D88;
+}
+
+a:focus,
+a:hover {
+	text-decoration: none;
+}
+
+input:focus,
+button:focus,
+textarea:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 10px;
+	font-weight: 600;
+	line-height: 1.4em;
+	color: #334D88;
+}
+
+html,
+body {
+	height: 100%
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 1.7em;
+	color: #6679A5;
+}
+
+
+/* Remove Chrome Input Field's Unwanted Yellow Background Color */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+	-webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+
+/*-------------------
+3. Helper-Class
+--------------------*/
+
+.fa,
+.far,
+.fas {
+	font-weight: 900;
+	background: linear-gradient(to right, #75aef0 0%, #b566ea 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.owl-prev .fa-angle-left,
+.owl-next .fa-angle-right,
+#scrollUp .fa-angle-up {
+	background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.owl-prev:hover .fa-angle-left,
+.owl-next:hover .fa-angle-right {
+	background: linear-gradient(to right, #75aef0 0%, #b566ea 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.section-padding {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.section-padding-bottom {
+	padding-bottom: 120px;
+}
+
+.section-padding-top {
+	padding-top: 120px;
+}
+
+.gray-bg {
+	background-color: #F7F8FB
+}
+
+.half-gray {
+	position: relative;
+}
+
+.half-gray:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 55%;
+	background-color: #F7F8FB;
+	z-index: -1;
+}
+
+.section-bg {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.equal-height {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.equal-height.revers {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	-ms-flex-direction: row-reverse;
+	flex-direction: row-reverse;
+}
+
+.start-height {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+
+.clear-hidden {
+	overflow: hidden;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.text-gradient {
+	background: linear-gradient(to right, #75aef0 0%, #b566ea 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.text-white {
+	color: #ffffff;
+}
+
+.dark-white {
+	color: #8899C2;
+}
+
+[class|=space] {
+	display: block;
+	width: 100%;
+	overflow: hidden
+}
+
+.space-5 {
+	height: 5px;
+}
+
+.space-10 {
+	height: 10px;
+}
+
+.space-15 {
+	height: 15px;
+}
+
+.space-20 {
+	height: 20px;
+}
+
+.space-25 {
+	height: 25px;
+}
+
+.space-30 {
+	height: 30px;
+}
+
+.space-40 {
+	height: 40px;
+}
+
+.space-50 {
+	height: 50px;
+}
+
+.space-60 {
+	height: 60px;
+}
+
+
+/*--------------------
+4. Header-Area 
+---------------------*/
+
+.header-area {
+	min-height: 100vh;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+}
+
+.header-area .head-title {
+	font-size: 35px;
+}
+
+.header-area .bttn-1 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-right: 15px;
+}
+
+.header-area .title {
+	margin-bottom: 15px;
+}
+
+.media:first-child {
+	margin-top: 20px;
+}
+
+.single-usage {
+	float: left;
+	margin: 20px 0;
+	padding: 0 20px;
+	width: 33.3333%;
+}
+
+.single-usage:after {
+	background-color: #cdcdcd;
+	content: "";
+	height: 30px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 1px;
+}
+
+.usage-icon.media-left {
+	padding-right: 20px;
+	vertical-align: middle;
+}
+
+.usage-icon i {
+	font-size: 30px;
+	background: linear-gradient(to right, #75aef0 0%, #b566ea 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.useges-quantity h2 {
+	font-size: 36px;
+	line-height: 1;
+	margin: 0;
+	background: linear-gradient(to right, #75aef0 0%, #b566ea 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.useges-quantity p {
+	font-weight: 400;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+@media (max-width: 425px) {
+	.single-usage {
+		padding: 0;
+		width: 100%;
+	}
+}
+
+
+/*--------------------
+5. Page-Title 
+---------------------*/
+
+.page-title {
+	text-align: center;
+	position: relative;
+}
+
+.page-title .title {
+	margin-bottom: 15px;
+	font-size: 28px;
+	margin-top: -5px;
+}
+
+
+/*-----------------
+6. Contact-Area 
+------------------*/
+
+.contact-area {
+	background-image: url('images/services-bg.jpg');
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.contact-area .bg-text {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	font-size: 300px;
+	color: #ffffff;
+	opacity: 0.1;
+	cursor: default;
+	z-index: -1;
+}
+
+
+/*-----------------
+7. Footer-Area 
+-------------------*/
+
+.footer-area {
+	background-color: #334D88;
+	background-image: url('images/dots.png');
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	color: #8899C2;
+}
+
+.footer-top {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.footer-area .footer-title {
+	font-size: 20px;
+	color: #ffffff;
+	margin-bottom: 20px;
+	line-height: 20px;
+}
+
+.footer-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-list li {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.footer-list li:last-child {
+	margin-bottom: 0;
+}
+
+.footer-list li a {
+	display: block;
+	color: #8899C2;
+}
+
+.footer-list li a:hover {
+	color: #ffffff;
+}
+
+.fotter-social-links ul {
+	padding-left: 0px;
+	margin-left: 0px;
+}
+
+.fotter-social-links ul li {
+	display: inline-block;
+}
+
+.fotter-social-links ul li a {
+	font-size: 14px;
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 36px;
+	margin: 5px;
+	color: #fff;
+	-webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.18);
+	-moz-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.18);
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.18);
+	-webkit-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+}
+
+.fotter-social-links ul li a.facebook {
+	background: #377ad6;
+	border-color: #377ad6;
+}
+
+.fotter-social-links ul li a.twitter {
+	background: #00c6f7;
+	border-color: #00c6f7;
+}
+
+.fotter-social-links ul li a.linkedin {
+	background: #007bb5;
+	border-color: #007bb5;
+}
+
+.fotter-social-links ul li a.google-plus {
+	background: #d1062c;
+	border-color: #d1062c;
+}
+
+.fotter-social-links ul li a.dribbble {
+	background: #f7007a;
+	border-color: #f7007a;
+}
+
+.fotter-social-links ul li a.youtube {
+	background: #f00f00;
+	border-color: #f00f00;
+}
+
+blockquote {
+	border-left-color: #28CC8B;
+	background-color: #F7F8FB;
+	padding: 30px 30px;
+}
+
+.list-inline li {
+	display: inline-block;
+}
+
+
+/*-----------------
+8. Preloader 
+-----------------*/
+
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+	z-index: 999999;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.spinner {
+	margin: auto;
+	width: 50px;
+	height: 40px;
+	text-align: center;
+	font-size: 10px;
+}
+
+.spinner>div {
+	background-color: #334D88;
+	height: 100%;
+	width: 2px;
+	margin: 2px;
+	display: inline-block;
+	-webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+	animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+	-webkit-animation-delay: -1.1s;
+	animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+	-webkit-animation-delay: -1.0s;
+	animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+	-webkit-animation-delay: -0.9s;
+	animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+	-webkit-animation-delay: -0.8s;
+	animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+	0%,
+	40%,
+	100% {
+		-webkit-transform: scaleY(0.4)
+	}
+	20% {
+		-webkit-transform: scaleY(1.0)
+	}
+}
+
+@keyframes sk-stretchdelay {
+	0%,
+	40%,
+	100% {
+		transform: scaleY(0.4);
+		-webkit-transform: scaleY(0.4);
+	}
+	20% {
+		transform: scaleY(1.0);
+		-webkit-transform: scaleY(1.0);
+	}
+}
+
+.counter-area {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.single-post .site-header {
+	padding-top: 0;
+}
